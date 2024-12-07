@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   imports: [],
-  template: ` <p>header works!</p> `,
+  template: ` <h1>Welcome to {{ title() }}!</h1> `,
   styles: ``,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  title = signal('Angular Ecommerce!');
+}
